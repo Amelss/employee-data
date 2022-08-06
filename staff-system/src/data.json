@@ -1,0 +1,173 @@
+[
+  {
+   " id": "0",
+    "employeeFirstName": "Pepe",
+    "employeeLastName": "Joh",
+    "jobTitle": "Head of Digital Marketing",
+    "department": "Marketing",
+    "startDate": "2018-11-28",
+    "salary": "70000",
+    "location": "London Office"
+  },
+  {
+    "id": "1",
+    "employeeFirstName": "Sariah",
+    "employeeLastName": "Braithwaite",
+    "jobTitle": "E-Commerce Assistant",
+    "department": "Digital",
+    "startDate": "2019-11-29",
+    "salary": "27000",
+    "location": "London Office"
+  },
+  {
+    "id": "2",
+    "employeeFirstName": "Mikel",
+    "employeeLastName": "Oriah",
+    "jobTitle": "Finance Co-Ordinator",
+    "department": "Finance",
+    "startDate": "2020-07-06 13:30",
+    "salary": "50000",
+    "location": "Nottingham Office"
+  },
+  {
+    "id": "3",
+    "employeeFirstName": "Kyra",
+    "employeeLastName": "Badijo",
+    "jobTitle": "Junior UI Designer",
+    "department": "Digital",
+    "startDate": "2017-03-03 ",
+    "salary": "30000",
+    "location": "London Office"
+  },
+  {
+    "id": "4",
+    "employeeFirstName": "Jamie",
+    "employeeLastName": "Callaghan",
+    "jobTitle": "Cleaner",
+    "department": "House Keeping",
+    "startDate": "2021-11-04",
+    "salary": "20000",
+    "location": "Manchester Office"
+  },
+  {
+    "id": "5",
+    "employeeFirstName": "Anjelica",
+    "employeeLastName": "Hanssen",
+    "jobTitle": "Shoot Assistant",
+    "department": "Creative",
+    "startDate": "2022-01-12",
+    "salary": "25000",
+    "location": "Nottingham Office"
+  },
+  {
+    "id": "6",
+    "employeeFirstName": "Dezba",
+    "employeeLastName": "Haber",
+    "jobTitle": "Accounts Payable Executive",
+    "department": "Finance",
+    "startDate": "2018-11-12 ",
+    "salary": "45000",
+    "location": "London Office"
+  },
+  {
+    "id": "7",
+    "employeeFirstName": "Eufemia",
+    "employeeLastName": "Sali",
+    "jobTitle": "Finance Director",
+    "department": "Finance",
+    "startDate": "2017-10-04 13:30",
+    "salary": "80000",
+    "location": "London Office"
+  },
+  {
+    "id": "8",
+    "employeeFirstName": "Elio",
+    "employeeLastName": "Paz",
+    "jobTitle": "Head of E-Commerce",
+    "department": "Digital",
+    "startDate": "2016-03-10",
+    "salary": "75000",
+    "location": "Manchester Office"
+  },
+  {
+   "id": "9",
+    "employeeFirstName": "Chantal",
+    "employeeLastName": "Travis",
+    "jobTitle": "Receptionist",
+    "department": "House Keeping",
+    "startDate": "2022-03-07",
+    "salary": "20000",
+    "location": "Nottingham Office"
+  },
+  {
+    "id": "10",
+    "employeeFirstName": "Zora",
+    "employeeLastName": "Ioannidis",
+    "jobTitle": "EMEA Marketing Assistant",
+    "department": "Marketing",
+    "startDate": "2021-03-02",
+    "salary": "23000",
+    "location": "London Office"
+  },
+  {
+    "id": "11",
+    "employeeFirstName": "Madhukar",
+    "employeeLastName": "Barber",
+    "jobTitle": "Junior Retoucher",
+    "department": "Creative",
+    "startDate": "2019-06-05 13:30",
+    "salary": "25000",
+    "location": "Manchester Office"
+  },
+  {
+    "id": "12",
+    "employeeFirstName": "Kyan",
+    "employeeLastName": "Barnes",
+    "jobTitle": "Content Coordinator",
+    "department": "Digital",
+    "startDate": "2021-10-26",
+    "salary": "27000",
+    "location": "London Office"
+  },
+  {
+    "id": "13",
+    "employeeFirstName": "Kwaku",
+    "employeeLastName": "Ansah",
+    "jobTitle": "Senior Business Analyst",
+    "department": "Strategy",
+    "startDate": "2015-08-05",
+    "salary": "85000",
+    "location": "London Office"
+  },
+  {
+    "id": "14",
+    "employeeFirstName": "Esidica",
+    "employeeLastName": "Peterson",
+    "jobTitle": "Senior Frontend Software Engineer",
+    "department": "IT",
+    "startDate": "2015-03-17",
+    "salary": "90000",
+    "location": "Nottingham Office"
+  },
+  {
+    "id": "15",
+    "employeeFirstName": "Atara",
+    "employeeLastName": "Dore",
+    "jobTitle": "Executive Data Analyst",
+    "department": "Strategy",
+    "startDate": "2020-05-06",
+    "salary": "50000",
+    "location": "Manchester Office"
+  },
+  {
+    "id": "16",
+    "employeeFirstName": "Jacob",
+    "employeeLastName": "Mallow",
+    "jobTitle": "Junior Backend Engineer",
+    "department": "IT",
+    "startDate": "2021-12-10",
+    "salary": "37000",
+    "location": "London Office"
+  }
+
+]
