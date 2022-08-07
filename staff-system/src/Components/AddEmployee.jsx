@@ -82,11 +82,11 @@ export default function AddEmployee({lastId, onSendEmployeeInfo}) {
                       
                     <div className='employee-input'>
                         <label htmlFor="location">Location</label>
-                          <select name="location" id="location"  className=' ml-[35px] employee-form'>
+                          <select name="location" id="location"  className=' ml-[35px] employee-form' value={formData.location} onChange={(e) => {setFormData({...formData, location: e.target.value})}}>
                               <option hidden> Select Office</option>
-                              <option value={formData.location} onChange={(e) => {setFormData({...formData, location: e.target.value})}}>London Office</option>
-                              <option value={formData.location} onChange={(e) => {setFormData({...formData, location: e.target.value})}}>Manchester Office</option>
-                              <option value={formData.location} onChange={(e) => {setFormData({...formData, location: e.target.value})}}>Nottingham Office</option>
+                              <option>London Office</option>
+                              <option>Manchester Office</option>
+                              <option>Nottingham Office</option>
                           </select>
                     </div>
                       <div className='px-8'>
