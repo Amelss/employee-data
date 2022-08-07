@@ -4,7 +4,7 @@ import React from 'react'
 export default function StaffInfo({employee }) {
   return (
     <div>
-      <div className="pl-3 block mt-2 bg-slate-100 md:flex shadow-lg rounded-lg">
+      <div className="pl-3 md:px-3 block mt-2 bg-slate-100 md:flex shadow-lg rounded-lg">
         <table className="w-full">
           <thead> 
           <tr className="">
@@ -18,7 +18,7 @@ export default function StaffInfo({employee }) {
           </thead>
           <thead>
           <tr>
-          <td className="mx-2 pr-2 md:text-center pb-3 pt-2 text-xs md:text-lg">
+          <td className="mx-2 pr-2 md:text-center pb-3 text-xs md:text-lg">
             {employee.employeeFirstName} {employee.employeeLastName}
           </td>
           <td className="employee-data text-ellipsis">{employee.jobTitle} </td>
@@ -28,7 +28,7 @@ export default function StaffInfo({employee }) {
             <td className="employee-data text-ellipsis">{employee.location} </td>
             </tr>
           </thead>
-        </table>
+          </table>
       </div>
     </div>
   );

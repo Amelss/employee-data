@@ -11,10 +11,12 @@ export default function AddEmployee({lastId, onSendEmployeeInfo}) {
         department: "",
         location: "",
         salary: ""
+       
     }
 
     const [addEmployee, setAddEmployee] = useState(false)
     const [formData, setFormData] = useState(newData);
+   
 
 
     function newEmployee(e) {
@@ -29,11 +31,14 @@ export default function AddEmployee({lastId, onSendEmployeeInfo}) {
             department: formData.department,
             location: formData.location,
             salary: formData.salary
+            
         }
         onSendEmployeeInfo(employeeInfo)
         setFormData(newData);
         setAddEmployee(addEmployee)
     }
+  
+ 
 
   return (
       <div>
@@ -67,7 +72,15 @@ export default function AddEmployee({lastId, onSendEmployeeInfo}) {
                       
                     <div className='employee-input'>
                         <label htmlFor="department">Department</label>
-                        <input type="text" name="department" id="department"  value={formData.department} className='employee-form ml-[11px]' onChange={ (e) => {setFormData({...formData, department: e.target.value})}} />
+                        <select name="department" id="department" className='employee-form ml-[11px]' value={formData.department} onChange={ (e) => {setFormData({...formData, department: e.target.value})}}>
+                          <option hidden >-- Select Department --</option>
+                          <option>Creative</option>
+                          <option>Digital</option>
+                          <option>IT</option>
+                          <option>Marketing</option>
+                          <option>Housekeeping</option>
+                          <option>Finance</option>
+                        </select>
                       </div>
                       
                     <div className='employee-input '>
@@ -83,12 +96,14 @@ export default function AddEmployee({lastId, onSendEmployeeInfo}) {
                     <div className='employee-input'>
                         <label htmlFor="location">Location</label>
                           <select name="location" id="location"  className=' ml-[35px] employee-form' value={formData.location} onChange={(e) => {setFormData({...formData, location: e.target.value})}}>
-                              <option hidden> Select Office</option>
+                              <option hidden>-- Select Office --</option>
                               <option>London Office</option>
                               <option>Manchester Office</option>
                               <option>Nottingham Office</option>
                           </select>
                     </div>
+            
+                    
                       <div className='px-8'>
                           
                         <button className='w-full bg-green-300 rounded-md px-3 mt-6 py-1 text-gray-700 hover:bg-green-400' onClick={newEmployee}>
