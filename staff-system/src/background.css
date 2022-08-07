@@ -1,0 +1,5 @@
+.employee-bg{
+background-color: #c3fcc2;
+opacity: 1;
+background-image:  repeating-radial-gradient( circle at 0 0, transparent 0, #c3fcc2 40px ), repeating-linear-gradient( #ffffff55, #ffffff );
+}

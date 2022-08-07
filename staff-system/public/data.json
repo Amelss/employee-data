@@ -25,7 +25,7 @@
     "employeeLastName": "Oriah",
     "jobTitle": "Finance Co-Ordinator",
     "department": "Finance",
-    "startDate": "2020-07-06 13:30",
+    "startDate": "2020-07-06",
     "salary": "50000",
     "location": "Nottingham Office"
   },
@@ -75,7 +75,7 @@
     "employeeLastName": "Sali",
     "jobTitle": "Finance Director",
     "department": "Finance",
-    "startDate": "2017-10-04 13:30",
+    "startDate": "2017-10-04",
     "salary": "80000",
     "location": "London Office"
   },
@@ -115,7 +115,7 @@
     "employeeLastName": "Barber",
     "jobTitle": "Junior Retoucher",
     "department": "Creative",
-    "startDate": "2019-06-05 13:30",
+    "startDate": "2019-06-05",
     "salary": "25000",
     "location": "Manchester Office"
   },

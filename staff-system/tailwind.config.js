@@ -6,6 +6,7 @@ module.exports = {
       fontFamily: {
         comfortaa: ["Comfortaa"]
       }
+    
     },
   },
   plugins: [],
