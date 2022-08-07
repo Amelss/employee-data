@@ -49,8 +49,8 @@ function App() {
 
 
   return (
-    <div className="font-comfortaa employee-bg min-h-screen">
-      <div className="bg-white mx-auto w-96 rounded-md md:w-[1200px] ">
+    <div className="font-comfortaa bg-white min-h-screen">
+      <div className=" ">
         <div className="">
           
      
@@ -75,8 +75,9 @@ function App() {
         onSortByChange={(mySort) => setSortBy(mySort)}
         filterBy={filterBy}
         onFilterByChange={(mySort) => setFilterBy(mySort)}
-      />
-      <AddEmployee
+          />
+          <div className="pb-10">
+            <AddEmployee
         onSendEmployeeInfo={(myEmployee) =>
           setEmployeeData([...employeeData, myEmployee])
         }
@@ -85,8 +86,10 @@ function App() {
           0
         )}
       />
-
-      <ul className=" mt-20 mx-auto w-96 md:w-[1000px] text-black">
+          </div>
+      
+<hr className="w-full"/>
+      <ul className=" mt-20 pb-10 mx-auto w-96 md:w-[1000px] text-black">
         {filteredEmployees.map((employee) => (
           <StaffInfo key={employee.id} employee={employee} />
         ))}
