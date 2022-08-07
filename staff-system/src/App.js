@@ -1,7 +1,6 @@
 import Search from "./Components/Search";
 import Header from "./Components/Header";
 import StaffInfo from "./Components/StaffInfo";
-import employeeInfo from "./data.json"
 import AddEmployee from "./Components/AddEmployee";
 import { useCallback, useEffect, useState } from "react";
 
@@ -9,18 +8,35 @@ import { useCallback, useEffect, useState } from "react";
 
 function App() {
 
-const [staffInfo, setStaffInfo] = useState([])
+  const [employeeData, setEmployeeData] = useState([])
+  const [sortBy, setSortBy] = useState("employeeFirstName")
+  const [orderBy, setOrderBy] = useState("ascending")
+  const [query, setQuery] = useState("")
 
-// const fetchData = useCallback(() => {
-//   fetch(`./data.json`)
-//   .then(res => res.json())
-//   .then(data => setStaffInfo(data))
-// }, [])
-  
-  
-//   useEffect(() => {
-//   fetchData()
-// }, [fetchData])
+
+  const filteredEmployees = employeeData.filter(
+    item => {
+      return (
+        item.employeeFirstName.toLowerCase().includes(query.toLowerCase()) ||
+        item.employeeLastName.toLowerCase().includes(query.toLowerCase()) ||
+        item.startDate.toLowerCase().includes(query.toLowerCase()) 
+      )
+    }
+  ).sort((a, b) => {
+    let order = (orderBy === 'ascending') ? 1 : -1;
+    return a[sortBy].toLowerCase() < b[sortBy].toLowerCase() ? -1 * order : 1 * order
+  })
+
+  const fetchData = useCallback(() => {
+    fetch(`./data.json`)
+    .then(res => res.json())
+    .then(data => setEmployeeData(data))
+  }, [])
+    
+    
+    useEffect(() => {
+    fetchData()
+  }, [fetchData])
 
 
   return (
@@ -34,10 +50,14 @@ const [staffInfo, setStaffInfo] = useState([])
           <Search />
         </div>
       </div>
-      <Header />
+      <Header
+        orderBy={orderBy}
+        onOrderByChange={mySort => setOrderBy(mySort)}
+        sortBy={sortBy}
+        onSortByChange={ mySort => setSortBy(mySort)} />
       <AddEmployee />
       <ul className="divide-y divide-gray-200">
-        {employeeInfo.map(employee => (
+        {filteredEmployees.map(employee => (
           <StaffInfo key={employee.id}
             employee={ employee} />
         ))}

@@ -1,38 +1,41 @@
 import React, { useState } from 'react';
 import { BsChevronDown, BsFilter, BsCheck } from "react-icons/bs";
 
-export default function Header() {
+export default function Header({sortBy, orderBy, onSortByChange, onOrderByChange}) {
 
     const [toggleMenu, setToggleMenu] = useState(false);
 
-    const DropDown = () => {
-        return (
-          
-    <div>
-              {toggleMenu && (
-                <div className="md:absolute top-30 md:mt-5 origin-top-right right-0 bg-slate-50 rounded-md shadow-lg w-60 ml-4 px-5 py-3" role="menu">
-              <div className="sort-items" role="menuitem">
-                <span>First Name</span> <BsCheck />
+    const DropDown = ({ sortBy, orderBy, onSortByChange, onOrderByChange}) => {
+      return (
+        <div>
+          {toggleMenu && (
+            <div
+              className="md:absolute top-30 md:mt-5 origin-top-right right-0 bg-slate-50 rounded-md shadow-lg w-60 ml-4 px-5 py-3"
+              role="menu"
+            >
+              <div className="sort-items" role="menuitem" onClick={() => onSortByChange("employeeFirstName")}>
+                <span>First Name</span> {sortBy === "employeeFirstName" && <BsCheck />}
               </div>
-              <div className="sort-items" role="menuitem">
-                <span>Last Name</span> <BsCheck />
+              <div className="sort-items" role="menuitem" onClick={() => onSortByChange("employeeLastName")}>
+                <span>Last Name</span> {sortBy === "employeeLastName" && <BsCheck />}
               </div>
-              <div className="sort-items" role="menuitem">
-                <span>Start Date</span> <BsCheck />
+              <div className="sort-items" role="menuitem" onClick={() => onSortByChange("startDate")} >
+                <span>Start Date</span> {sortBy === "startDate" && <BsCheck />}
               </div>
-              <div className="sort-items border-gray-100 border-t-2 pt-2" role="menuitem">
-                <span>Ascending</span> <BsCheck />
+              <div
+                className="sort-items border-gray-100 border-t-2 pt-2"
+                role="menuitem" onClick={() => onOrderByChange("ascending")}
+              >
+                <span>Ascending</span> {orderBy === "ascending" && <BsCheck />}
               </div>
-              <div className="sort-items" role="menuitem">
-                <span>Descending</span> <BsCheck />
+              <div className="sort-items" role="menuitem" onClick={() => onOrderByChange("descending")}>
+                <span>Descending</span> {orderBy === "descending" && <BsCheck />}
               </div>
             </div>
-            )}  
-                
-            
-          </div>
-        );
-    }
+          )}
+        </div>
+      );
+    };
 
 
 
@@ -49,7 +52,11 @@ export default function Header() {
                   Filter <BsFilter className='ml-1'/>
               </button>
               </div>
-            <DropDown />
+                  <DropDown
+                      sortBy={sortBy}
+                      onSortByChange={mySort => onSortByChange(mySort)}
+                      orderBy={orderBy}
+                      onOrderByChange={myOrder => onOrderByChange(myOrder) } />
           </div>
           </div>
           
