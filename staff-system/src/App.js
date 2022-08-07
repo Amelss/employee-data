@@ -31,11 +31,7 @@ function App() {
     let order = (orderBy === 'ascending' ) ? 1 : -1;
     return a[sortBy].toLowerCase() < b[sortBy].toLowerCase() ? -1 * order : 1 * order
     
-  }).sort((a, b) => {
-    let location =(filterBy === 'location') ? 1 : -1
-    return a[sortBy].toLowerCase() > b[sortBy].toLowerCase() ? -1 * location : 1 * location
   })
-
   const fetchData = useCallback(() => {
     fetch(`./data.json`)
     .then(res => res.json())
@@ -49,13 +45,13 @@ function App() {
 
 
   return (
-    <div className="font-comfortaa bg-white min-h-screen">
+    <div className="font-comfortaa bg-white min-h-screen mt-5">
       <div className=" ">
         <div className="">
           
      
       <div className="flex items-center pl-1 md:pl-6">
-        <div className="flex items-center mt-5">
+        <div className="flex items-center ">
           <img src="./images/abstract.png" alt="logo" className="w-8 ml-3" />
           <h1 className="hidden md:flex ml-3 font-comfortaa font-semibold text-2xl">
             CaED
